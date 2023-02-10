@@ -1,0 +1,59 @@
+
+body{
+    margin: 0px;
+}
+
+#startcontainer{
+    display: grid;
+    background-image: url(https://media.giphy.com/media/BhW85yDQ1TA3u/giphy.gif);
+    background-position: -300px,0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 
+    'nv'
+    'mn'
+    'ft'
+}
+
+.startnav{
+    grid-area: nv;
+    background-color: rgba(0, 0, 0, 0.842);
+    display: flex;
+    justify-content: space-evenly;
+}
+.indexmain{
+    grid-area: mn;
+    display: grid;
+    flex-direction: column;
+}
+
+.hometext{
+    position: relative;
+    top:10vh;
+}
+
+
+.contentmain{
+    background-color:rgb(43, 45, 49);
+}
+
+/* ##################################Text######################### */
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    font-size: 10vh;
+    color:rgba(255, 255, 255, 0.671);
+    margin:0px;
+    text-align: center;
+}
+h2{  
+    font-size: 4vh;
+    color: rgba(255, 255, 255, 0.432);
+    margin: 0px;
+    text-align: center;
+}
