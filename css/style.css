@@ -3,14 +3,14 @@ body{
     margin: 0px;
 }
 
+/*#########################Gäller för startsida################*/
 #startcontainer{
     display: grid;
     background-image: url(https://media.giphy.com/media/BhW85yDQ1TA3u/giphy.gif);
-    background-position: -300px,0;
     background-size: cover;
     background-repeat: no-repeat;
-    grid-template-columns: 100vw;
-    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 200vh 10vh;
     grid-template-areas: 
     'nv'
     'mn'
@@ -34,9 +34,82 @@ body{
     top:10vh;
 }
 
+/*##############Gäller graffit ###################*/
+#graffiticontainer{
+    display: grid;
+    background-color: rgb(24, 24, 24);
+    grid-template-columns: 100%;
+    grid-template-rows: 30vh 200vh 10vh;
+    grid-template-areas: 
+    'nav'
+    'main'
+    'foot'
+}
+/*######################Hiphop########################*/
+#hiphopcontainer{
+    display:grid;
+    background-color: black;
+    grid-template-columns: 100%;
+    grid-template-rows: 30vh 70vh 70vh 70vh 70vh 10vh;
+    grid-template-areas: 
+    'nav'
+    'main'
+    'foot'
+}
 
-.contentmain{
+.main{ 
+    grid-area: main;
+    flex-direction: column;
+    gap: 5vh;
+}
+.boxlayout{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+    margin-left: 60px;
+    margin-top: 10vh;
+}
+
+.musictext{
+    color: white;
+    font-size: 4vh;
+}
+
+.albumbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.album_layout{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    justify-content: center;
+}
+
+
+#bergsjon{
+    
+}
+
+#molndal{
+
+}
+
+#tips{
+
+}
+
+.contentnav{
+    grid-area:nav;
+    display: flex;
     background-color:rgb(43, 45, 49);
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 /* ##################################Text######################### */
@@ -45,15 +118,47 @@ a{
     color: white;
 }
 
-h1{
-    font-size: 10vh;
+.starth1{
+    font-size: 15vh;
     color:rgba(255, 255, 255, 0.671);
     margin:0px;
     text-align: center;
+}
+
+h1{
+    font-size: 15vh;
+    color: white;
+    margin: 0px;
 }
 h2{  
     font-size: 4vh;
     color: rgba(255, 255, 255, 0.432);
     margin: 0px;
     text-align: center;
+}
+
+h3{
+    font-size: 7vh;
+    color: white;
+}
+
+p{
+    font-size: 5vh;
+    color: white;
+    margin: 0px;
+}
+
+img{
+    height: 50vh;
+    width: 50vh;
+}
+
+@media screen and (max-width: 600px){
+    #startcontainer{
+        background-image: url(https://media.giphy.com/media/BhW85yDQ1TA3u/giphy.gif);
+        background-position: -300px,0;
+    }
+    h1{
+        font-size: 10vh;
+    }
 }
