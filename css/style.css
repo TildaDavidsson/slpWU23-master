@@ -19,9 +19,11 @@ body{
 
 .startnav{
     grid-area: nv;
-    background-color: rgba(0, 0, 0, 0.842);
     display: flex;
+    background-color: rgba(0, 0, 0, 0.842);
     justify-content: space-evenly;
+    align-items: flex-start;
+
 }
 .indexmain{
     grid-area: mn;
@@ -32,6 +34,16 @@ body{
 .hometext{
     position: relative;
     top:10vh;
+}
+
+.contentnav{
+    grid-area:nav;
+    display: flex;
+    background-image: url("../img/nav.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 /*##############Gäller graffit ###################*/
@@ -50,7 +62,7 @@ body{
     display:grid;
     background-color: black;
     grid-template-columns: 100%;
-    grid-template-rows: 30vh 70vh 70vh 70vh 70vh 10vh;
+    grid-template-rows: 30vh 400vh 10vh;
     grid-template-areas: 
     'nav'
     'main'
@@ -76,6 +88,7 @@ body{
 .musictext{
     color: white;
     font-size: 4vh;
+    text-align: center;
 }
 
 .albumbox{
@@ -88,7 +101,8 @@ body{
     display: flex;
     flex-direction: column;
     row-gap: 2vh;
-    justify-content: center;
+    justify-content: flex-start;
+    max-width: 25vw;
 }
 
 
@@ -104,13 +118,6 @@ body{
 
 }
 
-.contentnav{
-    grid-area:nav;
-    display: flex;
-    background-color:rgb(43, 45, 49);
-    flex-wrap: wrap;
-    flex-direction: column;
-}
 
 /* ##################################Text######################### */
 a{
@@ -140,6 +147,7 @@ h2{
 h3{
     font-size: 7vh;
     color: white;
+    margin-top: 1vh;
 }
 
 p{
