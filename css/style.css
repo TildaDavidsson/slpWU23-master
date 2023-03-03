@@ -123,8 +123,13 @@ body{
     max-height: 30vh;
     top: 5vh;
     left: 8vw;
+<<<<<<< HEAD
     transition: all 0.3s ease-in-out;
   }
+=======
+    transition: all 0.5s ease;
+}
+>>>>>>> 1f5021ec4a05f424b7f9bba576916ceb161fc83b
   
   .image:nth-child(2){
     position: absolute;
@@ -183,6 +188,7 @@ body{
 .image:hover {
     transform: translateY(-7vh);
 }
+<<<<<<< HEAD
 
 /***************Menu button***************/
 
@@ -230,9 +236,48 @@ body{
     width: 5vw;
 }
 
+=======
+.image.clicked {
+    max-width: 50vh;
+    max-height: 50vh;
+    top: -2vh;
+    left: 65vw;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50vh;
+}
+.text-container {
+    z-index: 11;
+    position: absolute;
+    bottom: 0;
+    left: 50vw;
+    width: 30vw;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
   
-
-
+.text-container.active {
+    height: 20vh;
+}
+  
+.text {
+    background-color: rgba(0, 0, 0, 0.466);
+    padding: 1vh;
+}
+  
+.text p {
+    margin: 0;
+}
+  
+.image.clicked + .text-container {
+    height: 20vh;
+}
+  
+>>>>>>> 1f5021ec4a05f424b7f9bba576916ceb161fc83b
+  
 /* ##################################Text######################### */
 a{
     text-decoration: none;
