@@ -17,17 +17,6 @@ body{
     'ft'
 }
 
-#graffiticontainer{
-    display: grid;
-    background-color: rgb(24, 24, 24);
-    grid-template-columns: 100%;
-    grid-template-rows: 30vh 200vh 10vh;
-    grid-template-areas: 
-    'nav'
-    'main'
-    'foot'
-}
-
 .startnav{
     grid-area: nv;
     display: flex;
@@ -47,7 +36,18 @@ body{
     top:10vh;
 }
 
-.contentnav{
+#graffiticontainer{
+    display: grid;
+    background-color: rgb(24, 24, 24);
+    grid-template-columns: 100%;
+    grid-template-rows: 20vh 200vh 10vh;
+    grid-template-areas: 
+    'nav'
+    'main'
+    'foot'
+}
+
+.graffcontentnav{
     z-index: 3;
     grid-area:nav;
     display: flex;
@@ -55,9 +55,28 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.graffitimain{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 
+.footer{
+    grid-area:foot;
+}
+
+.spraycan{
+    height: 16vh;
+    width: 5vw;
+}
+
+.spraycan:hover{
+    transform: rotate(0.025turn);
+}
 
 /*##############Gäller graffit ###################*/ 
 
@@ -66,12 +85,23 @@ body{
     display:grid;
     background-color: black;
     grid-template-columns: 100%;
-    grid-template-rows: 30vh 400vh 10vh;
+    grid-template-rows: 10vh 400vh 10vh;
     grid-template-areas: 
     'nav'
     'main'
     'foot'
 }
+
+.contentnav{
+    grid-area:nav;
+    display: flex;
+    background-image: url("../img/nav.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
 
 .main{ 
     grid-area: main;
@@ -123,22 +153,17 @@ body{
     max-height: 30vh;
     top: 5vh;
     left: 8vw;
-<<<<<<< HEAD
     transition: all 0.3s ease-in-out;
-  }
-=======
-    transition: all 0.5s ease;
 }
->>>>>>> 1f5021ec4a05f424b7f9bba576916ceb161fc83b
   
-  .image:nth-child(2){
+.image:nth-child(2){
     position: absolute;
     z-index: 2;
     max-width: 33vh;
     max-height: 33vh;
     top: 4vh;
     left: 12vw;
-  }
+}
   
   .image:nth-child(3) {
     position: absolute;
@@ -188,55 +213,7 @@ body{
 .image:hover {
     transform: translateY(-7vh);
 }
-<<<<<<< HEAD
 
-/***************Menu button***************/
-
-.menu{
-    height: 50vh;
-    width: 20vw;
-    background: white;
-    position: fixed;
-    top: -20vh;
-    right: 0;
-    transition: top 0.5s;
-    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 2;
-}
-
-.show{
-    top: 0;
-    right: 0;
-}
-
-
-.menu-button{
-    cursor: pointer;
-    display: inline;
-}
-
-
-.fade-layer{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 1;
-}
-
-.fade-layer.visible{
-    display: block;
-}
-
-.spraycan{
-    height: 16vh;
-    width: 5vw;
-}
-
-=======
 .image.clicked {
     max-width: 50vh;
     max-height: 50vh;
@@ -275,9 +252,56 @@ body{
 .image.clicked + .text-container {
     height: 20vh;
 }
-  
->>>>>>> 1f5021ec4a05f424b7f9bba576916ceb161fc83b
-  
+
+.image {
+    position: absolute;
+}
+
+.displayimg{
+    position: absolute;
+}
+
+/***************Menu button***************/
+
+.menu{
+    height: 100vh;
+    width: 20vw;
+    background: white;
+    position: absolute;
+    top: -100vh;
+    right: 2vw;
+    transition: top 0.5s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 2;
+}
+
+.show{
+    top: 0;
+    right: 2vw;
+}
+
+
+.menu-button{
+    margin-left: 80vw;
+    cursor: pointer;
+    display: inline;
+}
+
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1;
+}
+
+.fade-layer.visible{
+    display: block;
+}
 /* ##################################Text######################### */
 a{
     text-decoration: none;
@@ -322,12 +346,20 @@ img{
     width: 50vh;
 }
 
-.image {
-    position: absolute;
+/*                    Skate         */
+#skatecontainer{
+    display:grid;
+    background-color: black;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 400vh 10vh;
+    grid-template-areas: 
+    'nav'
+    'main'
+    'foot'
 }
 
-.displayimg{
-    position: absolute;
+.skatenav{
+    grid-area: nav;
 }
 
 
