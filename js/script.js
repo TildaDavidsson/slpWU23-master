@@ -11,16 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     });  
+    const infoBoxes = document.querySelectorAll('.info-box');
+
+    infoBoxes.forEach(box => {
+      box.addEventListener('click', () => {
+        box.querySelector('.info-content').classList.toggle('active');
+      });
+    }); 
 });
 
-let layer = document.querySelector(".fade-layer").addEventListener("click",showMenu)
-let button = document.querySelector(".menu-button").addEventListener("click",showMenu)
 
 
-function showMenu(){
-    let menu = document.querySelector(".menu");
-    menu.classList.toggle("show");
-    
-    let layer = document.querySelector(".fade-layer");
-    layer.classList.toggle("visible");
-} 
+
