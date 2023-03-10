@@ -11,13 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     });  
-    const infoBoxes = document.querySelectorAll('.info-box');
 
-    infoBoxes.forEach(box => {
-      box.addEventListener('click', () => {
-        box.querySelector('.info-content').classList.toggle('active');
-      });
-    }); 
+
+  $('.info-btn').on('click', function() {
+    $(this).parent().toggleClass('active');
+  });  
 });
 
 

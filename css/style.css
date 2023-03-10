@@ -57,7 +57,7 @@ body{
 
 .vit-linje{
     filter:none;
-    z-index: 1;
+    z-index: 10;
     background-color: rgba(255, 255, 255, 0.829);
     width: 102.52vw;
     height: 4vh;
@@ -66,14 +66,13 @@ body{
 .storimg{
     display: flex;
     margin-top: -40vh;
-    z-index: 2;
+    z-index: 5;
     height: 100vh;
     width: auto;
     margin-right: 0px;
     margin-left:-8vw;
     background-image: url(../img/rodastenen.jpg);
     background-size: cover;
-    display: inline-block;
 }
 
 
@@ -97,7 +96,7 @@ body{
 
 .info-box {
     position: absolute;
-    bottom: 2vh;
+    bottom: 4vh;
     left: 50vw;
     transform: translateX(-50%);
     border-bottom-right-radius: 40px;
@@ -110,21 +109,21 @@ body{
     align-items: center;
     cursor: pointer;
     z-index: 2;
+    transition: bottom 0.9s ease;
 }
   
 .info-content {
-    z-index: 0;
+    display: flex;
+    z-index: 10;
     position: absolute;
-    bottom: -60vh;
+    bottom: 10vh;
     left: 9vw;
     transform: translateX(-50%);
-    width: 70vw;
-    height: 200vh;
+    border-radius: 50px;
+    width: 90vw;
+    height: 110vh;
     background-color: #fff;
-    padding: 8vw;
-    border-radius: 40px;
-    opacity: 0;
-    transition: opacity 0.3s ease, bottom 0.3s ease;
+    transition: bottom 0.9s ease;
     pointer-events: none;
 }
 
@@ -132,8 +131,25 @@ body{
     z-index: 1;
     font-size: 24px;
     font-weight: bold;
+    transition: bottom 0.9s ease;
 }
- 
+
+.info-box.active .info-content {
+    opacity: 1;
+    bottom: 9vh;
+    pointer-events: auto;
+}
+
+.info-box.active {
+    bottom: -100vh;
+}
+
+.inbox-image{
+    height: 50vh;
+    width: 50vh;
+    padding: 5vw;
+}
+
 
 .footer{
     grid-area:foot;
@@ -152,7 +168,7 @@ body{
 }
 
 .contentnav{
-    z-index: 3;
+    z-index: 10;
     grid-area:nav;
     display: flex;
     background-color:  rgba(0, 0, 0, 0.842);
