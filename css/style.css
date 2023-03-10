@@ -10,7 +10,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     grid-template-columns: 100%;
-    grid-template-rows: 10vh 200vh 10vh;
+    grid-template-rows: 13vh 200vh 10vh;
     grid-template-areas: 
     'nv'
     'mn'
@@ -22,8 +22,6 @@ body{
     display: flex;
     background-color: rgba(0, 0, 0, 0.842);
     justify-content: space-evenly;
-    align-items: flex-start;
-
 }
 .indexmain{
     grid-area: mn;
@@ -36,26 +34,16 @@ body{
     top:10vh;
 }
 
+
 #graffiticontainer{
     display: grid;
     background-color: rgb(24, 24, 24);
     grid-template-columns: 100%;
-    grid-template-rows: 20vh 200vh 10vh;
+    grid-template-rows: 20vh 400vh 10vh;
     grid-template-areas: 
     'nav'
     'main'
     'foot'
-}
-
-.graffcontentnav{
-    z-index: 3;
-    grid-area:nav;
-    display: flex;
-    background-image: url("../img/nav.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex-wrap: wrap;
-    flex-direction: row;
 }
 
 .graffitimain{
@@ -63,29 +51,43 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    padding: 8vh;  
+}
+.graffbox{
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 5vw;
+    justify-content: center;
+}
+
+.smalgraffbox{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 90vh;
+    width: 40vw;
+}
+
+.graffbox2{
+    display: flex;
+    background-color: white;
+    width: 85vw;
+    height: 60vh;
 }
 
 .footer{
     grid-area:foot;
 }
 
-.spraycan{
-    height: 16vh;
-    width: 5vw;
-}
-
-.spraycan:hover{
-    transform: rotate(0.025turn);
-}
-
-/*##############Gäller graffit ###################*/ 
-
 /*######################Hiphop########################*/
 #hiphopcontainer{
     display:grid;
     background-color: black;
     grid-template-columns: 100%;
-    grid-template-rows: 10vh 400vh 10vh;
+    grid-template-rows: 20vh 450vh 10vh;
     grid-template-areas: 
     'nav'
     'main'
@@ -93,13 +95,12 @@ body{
 }
 
 .contentnav{
+    z-index: 1;
     grid-area:nav;
     display: flex;
-    background-image: url("../img/nav.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex-wrap: wrap;
+    background-color:  rgba(0, 0, 0, 0.842);
     flex-direction: row;
+    height: 20vh;
 }
 
 
@@ -261,61 +262,31 @@ body{
     position: absolute;
 }
 
-/***************Menu button***************/
 
-.menu{
-    height: 100vh;
-    width: 20vw;
-    background: white;
-    position: absolute;
-    top: -100vh;
-    right: 2vw;
-    transition: top 0.5s;
-    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 2;
-}
-
-.show{
-    top: 0;
-    right: 2vw;
-}
-
-
-.menu-button{
-    margin-left: 80vw;
-    cursor: pointer;
-    display: inline;
-}
-
-
-.fade-layer{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 1;
-}
-
-.fade-layer.visible{
-    display: block;
-}
 /* ##################################Text######################### */
 a{
     text-decoration: none;
     color: white;
+    padding-left: 8vw;
+    margin-top: 10vh;
+}
+
+.astart{
+    text-decoration: none;
+    color: white;
+    margin-top: 3vh;
+    padding-left: 0px;
 }
 
 .starth1{
-    font-size: 15vh;
+    font-size: 20vh;
     color:rgba(255, 255, 255, 0.671);
     margin:0px;
     text-align: center;
 }
-
-
+.contenth1{
+    margin-top: 2vh;
+}
 h1{
     font-size: 15vh;
     color: white;
@@ -328,7 +299,10 @@ h2{
     margin: 0px;
     text-align: center;
 }
-
+.starth3{
+    font-size: 7vh;
+    color: white;
+}
 h3{
     font-size: 7vh;
     color: white;
@@ -344,6 +318,22 @@ p{
 img{
     height: 50vh;
     width: 50vh;
+}
+
+.storimg{
+    display: flex;
+    margin-top: -40vh;
+    z-index: 0;
+    height: 100vh;
+    width: 102.52vw;
+    margin-left:-8vw;
+    background-image: url(../img/rodasten.jpg);
+    background-size: cover;
+}
+.hemikon{
+    height: 7vh;
+    width: 7vh;
+    margin-top: 1.5vh;
 }
 
 /*                    Skate         */
