@@ -51,32 +51,105 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 8vh;  
+    padding: 8vh;
+    row-gap: 3vh; 
 }
-.graffbox{
-    width: 90vw;
+
+.vit-linje{
+    filter:none;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.829);
+    width: 102.52vw;
+    height: 4vh;
+    align-self: flex-end;
+}
+.storimg{
+    display: flex;
+    margin-top: -40vh;
+    z-index: 5;
     height: 100vh;
+    width: auto;
+    margin-right: 0px;
+    margin-left:-8vw;
+    background-image: url(../img/rodastenen.jpg);
+    background-size: cover;
+}
+
+
+.storimgtitel{
+    font-size: 15vh;
+    color:rgba(255, 255, 255, 0.849);
+    margin-top: 40vh;
+    margin-left: 6vw;
+    padding-bottom: 4vh;
+    padding-left: 3vh;
+    position: absolute;
+}
+
+.storimgundertitel{
+    font-size: 4vh;
+    color:rgba(255, 255, 255, 0.849);
+    margin-top: 55vh;
+    margin-left: 8vw;
+    position: absolute;
+}
+
+.info-box {
+    position: absolute;
+    bottom: 4vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    width: 20vw;
+    height: 5vw;
+    background-color: #fff;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    column-gap: 5vw;
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: bottom 0.9s ease;
+}
+  
+.info-content {
+    display: flex;
+    z-index: 10;
+    position: absolute;
+    bottom: 10vh;
+    left: 9vw;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    width: 90vw;
+    height: 110vh;
+    background-color: #fff;
+    transition: bottom 0.9s ease;
+    pointer-events: none;
 }
 
-.smalgraffbox{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    height: 90vh;
-    width: 40vw;
+.info-btn {
+    z-index: 1;
+    font-size: 24px;
+    font-weight: bold;
+    transition: bottom 0.9s ease;
 }
 
-.graffbox2{
-    display: flex;
-    background-color: white;
-    width: 85vw;
-    height: 60vh;
+.info-box.active .info-content {
+    opacity: 1;
+    bottom: 9vh;
+    pointer-events: auto;
 }
+
+.info-box.active {
+    bottom: -100vh;
+}
+
+.inbox-image{
+    height: 50vh;
+    width: 50vh;
+    padding: 5vw;
+}
+
 
 .footer{
     grid-area:foot;
@@ -95,7 +168,7 @@ body{
 }
 
 .contentnav{
-    z-index: 1;
+    z-index: 10;
     grid-area:nav;
     display: flex;
     background-color:  rgba(0, 0, 0, 0.842);
@@ -278,6 +351,7 @@ a{
     padding-left: 0px;
 }
 
+
 .starth1{
     font-size: 20vh;
     color:rgba(255, 255, 255, 0.671);
@@ -320,16 +394,6 @@ img{
     width: 50vh;
 }
 
-.storimg{
-    display: flex;
-    margin-top: -40vh;
-    z-index: 0;
-    height: 100vh;
-    width: 102.52vw;
-    margin-left:-8vw;
-    background-image: url(../img/rodasten.jpg);
-    background-size: cover;
-}
 .hemikon{
     height: 7vh;
     width: 7vh;
@@ -348,8 +412,39 @@ img{
     'foot'
 }
 
-.skatenav{
-    grid-area: nav;
+.skatemain{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 8vh;
+    row-gap: 3vh; 
+}
+
+
+.skatebox{
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 5vw;
+    justify-content: center;
+}
+
+.smalskatebox{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 90vh;
+    width: 40vw;
+}
+
+.skatebox2{
+    display: flex;
+    background-color: white;
+    width: 85vw;
+    height: 60vh;
 }
 
 
