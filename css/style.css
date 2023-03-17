@@ -12,17 +12,11 @@ body{
     grid-template-columns: 100%;
     grid-template-rows: 13vh 200vh 10vh;
     grid-template-areas: 
-    'nv'
+    'nav'
     'mn'
     'ft'
 }
 
-.startnav{
-    grid-area: nv;
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.842);
-    justify-content: space-evenly;
-}
 .indexmain{
     grid-area: mn;
     display: grid;
@@ -95,6 +89,9 @@ body{
 }
 
 .info-box {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1vh;
     position: absolute;
     bottom: 4vh;
     left: 50vw;
@@ -114,6 +111,7 @@ body{
   
 .info-content {
     display: flex;
+    flex-wrap: wrap;
     z-index: 10;
     position: absolute;
     bottom: 10vh;
@@ -129,8 +127,6 @@ body{
 
 .info-btn {
     z-index: 1;
-    font-size: 24px;
-    font-weight: bold;
     transition: bottom 0.9s ease;
 }
 
@@ -144,17 +140,48 @@ body{
     bottom: -100vh;
 }
 
-.inbox-image{
-    height: 50vh;
-    width: 50vh;
-    padding: 5vw;
+.downarrow {
+    height:3vh;
+    width: 3vh;
+    transition: transform 0.5s;
 }
 
+.downarrow.active {
+    transform: rotate(180deg);
+}
+
+.info-titeltext{
+    font-size: 10vh;
+    height:15vh;
+    padding:2.5vw;
+    position: absolute;
+    padding-top: 70vh;
+}
+.info-undertext{
+    font-size:3vh;
+    padding: 2.5vw;
+    position: absolute;
+    padding-top: 80vh;
+    padding-right: 30vw;
+}
+.info-img{
+    position: absolute;
+    height: 36vh;
+    width: 28vw;
+    margin-top: 72vh;
+    margin-left: 60vw;
+    border-bottom-right-radius: 40px ;
+}
 
 .footer{
     grid-area:foot;
 }
-
+.kartarodasten{
+    height: 60vh;
+    width: 95vw;
+    padding:2.5vw;
+    margin-top:2vw;
+}
 /*######################Hiphop########################*/
 #hiphopcontainer{
     display:grid;
@@ -173,14 +200,22 @@ body{
     display: flex;
     background-color:  rgba(0, 0, 0, 0.842);
     flex-direction: row;
-    height: 20vh;
 }
 
 
-.main{ 
+.hiphopmain{ 
     grid-area: main;
     flex-direction: column;
     gap: 5vh;
+    padding-top: 40vh;
+}
+
+.consert{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height:100vh;
+    margin-top: -40vh;
 }
 .boxlayout{
     display: flex;
@@ -445,6 +480,52 @@ img{
     background-color: white;
     width: 85vw;
     height: 60vh;
+}
+
+/****************************Clothing************************/
+#clothingcontainer{
+    display:grid;
+    background-color: black;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 400vh 10vh;
+    grid-template-areas: 
+    'nav'
+    'clothingmain'
+    'foot'
+}
+
+.clothingmain{
+    grid-area: clothingmain;
+}
+
+.clothingbox{
+    margin-top: -10vh;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2vh;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+}
+.firstimg{
+    width: 100vw;
+    height:80vh;
+    background-color: burlywood;
+}
+.secondimg{
+    position: relative;
+    background: lightblue;
+    width: 32vw;
+    height: 32vw;
+}
+
+.clothingbox-text{
+    z-index:2;
+    font-size: 20vh;
+    position: absolute;
+    margin-top: 40vh;
+    margin-left: 60vw;
+    opacity: 0.7;
 }
 
 

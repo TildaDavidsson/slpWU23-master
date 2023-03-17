@@ -15,7 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $('.info-btn').on('click', function() {
     $(this).parent().toggleClass('active');
-  });  
+  }); 
+   
+  $('.info-btn').on('click', function() {
+    $(this).find('.downarrow').toggleClass('active');
+  });
 });
 
 
