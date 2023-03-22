@@ -78,6 +78,14 @@ body{
     position: relative;
 }
 
+.graffitikarta{
+    margin-top:5vh ;
+    width: 80vw;
+    height: 60vh;
+    margin-left: 5vw;
+
+}
+
 
 .storimgtitel{
     font-size: 15vh;
@@ -102,7 +110,7 @@ body{
     flex-wrap: wrap;
     row-gap: 1vh;
     position: absolute;
-    bottom: 4vh;
+    bottom: 10vh;
     left: 50vw;
     transform: translateX(-50%);
     border-bottom-right-radius: 40px;
@@ -130,7 +138,6 @@ body{
     border-bottom-right-radius: 40px;
     border-bottom-left-radius: 40px;
     width: 20vw;
-    height: 5vw;
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -170,7 +177,6 @@ body{
     transition: bottom 0.9s ease;
     pointer-events: none;
 }
-
 .info-btn {
     z-index: 1;
     transition: bottom 0.9s ease;
@@ -262,7 +268,7 @@ body{
     display:grid;
     background-color: black;
     grid-template-columns: 100%;
-    grid-template-rows: 13vh 450vh 10vh;
+    grid-template-rows: 13vh auto 10vh;
     grid-template-areas: 
     'nav'
     'main'
@@ -295,6 +301,8 @@ body{
 }
 .boxlayout{
     display: flex;
+    position: relative;
+    margin-top: 10vh;
     justify-content: center;
     flex-direction: column;
 }
@@ -385,25 +393,20 @@ body{
     left: 34vw;
     top: -1vh;
 }
-  
-.image--enlarged {
-    max-width: 50vh;
-    max-height: 50vh;
-    top: -2vh;
-    left: 65vw;
-    z-index: 10;
-}
-  
- 
+
 .image:hover {
     transform: translateY(-7vh);
+}
+
+.image.clicked + .image.clicked{
+    transform: rotate(90deg);
 }
 
 .image.clicked {
     max-width: 50vh;
     max-height: 50vh;
     top: -2vh;
-    left: 65vw;
+    left: 65vw; 
 }
 .image-container {
     position: relative;
@@ -424,20 +427,13 @@ body{
 .text-container.active {
     height: 20vh;
 }
-  
-.text {
+.text{
     background-color: rgba(0, 0, 0, 0.466);
     padding: 1vh;
-}
-  
-.text p {
-    margin: 0;
-}
-  
+}  
 .image.clicked + .text-container {
     height: 20vh;
 }
-
 .image {
     position: absolute;
 }
