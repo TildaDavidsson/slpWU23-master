@@ -17,6 +17,14 @@ body{
     'ft'
 }
 
+.contentnav{
+    z-index: 10;
+    grid-area:nav;
+    display: flex;
+    background-color:  rgba(0, 0, 0, 0.842);
+    flex-direction: row;
+}
+
 .indexmain{
     grid-area: mn;
     display: grid;
@@ -33,7 +41,7 @@ body{
     display: grid;
     background-color: rgb(24, 24, 24);
     grid-template-columns: 100%;
-    grid-template-rows: 20vh 400vh 10vh;
+    grid-template-rows: 13vh 400vh 10vh;
     grid-template-areas: 
     'nav'
     'main'
@@ -254,21 +262,12 @@ body{
     display:grid;
     background-color: black;
     grid-template-columns: 100%;
-    grid-template-rows: 20vh 450vh 10vh;
+    grid-template-rows: 13vh 450vh 10vh;
     grid-template-areas: 
     'nav'
     'main'
     'foot'
 }
-
-.contentnav{
-    z-index: 10;
-    grid-area:nav;
-    display: flex;
-    background-color:  rgba(0, 0, 0, 0.842);
-    flex-direction: row;
-}
-
 
 .hiphopmain{ 
     grid-area: main;
@@ -351,49 +350,49 @@ body{
     left: 12vw;
 }
   
-  .image:nth-child(3) {
+.image:nth-child(3) {
     position: absolute;
     z-index: 3;
     max-width: 36vh;
     max-height: 36vh;
     top: 3vh;
     left: 16vw;
-  }
+}
   
-  .image:nth-child(4) {
+.image:nth-child(4) {
     position: absolute;
     z-index: 4;
     max-width: 39vh;
     max-height: 39vh;
     top: 2vh;
     left: 21vw;
-  }
+}
   
-  .image:nth-child(5) {
+.image:nth-child(5) {
     position: absolute;
     z-index: 5;
     max-width: 41vh;
     max-height: 41vh;
     top: 1vh;
     left: 27vw;
-  }
+}
   
-  .image:nth-child(6) {
+.image:nth-child(6) {
     position: absolute;
     z-index: 6;
     max-width: 44vh;
     max-height: 44vh;
     left: 34vw;
     top: -1vh;
-  }
+}
   
-  .image--enlarged {
+.image--enlarged {
     max-width: 50vh;
     max-height: 50vh;
     top: -2vh;
     left: 65vw;
     z-index: 10;
-  }
+}
   
  
 .image:hover {
@@ -453,7 +452,7 @@ a{
     text-decoration: none;
     color: white;
     padding-left: 8vw;
-    margin-top: 10vh;
+    margin-top: 3vh;
 }
 
 .astart{
@@ -517,7 +516,7 @@ img{
     display:grid;
     background-color: black;
     grid-template-columns: 100%;
-    grid-template-rows: 10vh 400vh 10vh;
+    grid-template-rows: 13vh 400vh 10vh;
     grid-template-areas: 
     'nav'
     'main'
@@ -564,7 +563,7 @@ img{
     display:grid;
     background-color: black;
     grid-template-columns: 100%;
-    grid-template-rows: 20vh 400vh 10vh;
+    grid-template-rows: 13vh 400vh 10vh;
     grid-template-areas: 
     'nav'
     'clothingmain'
@@ -605,8 +604,8 @@ img{
 }
 
 .adidas{
-    position: absolute;
-    margin-top:68vh;
+    position: relative;
+    margin-top:72vh;
     display: flex;
     flex-wrap: wrap;
     padding: 2.5vw;
@@ -621,7 +620,78 @@ img{
     margin-left: 68vw;
     margin-top: -23vh;
 }
+.adidasoutfit1{
+    margin-left: 1vw;
+    margin-top: -20vh;
+    height:45vh;
+}
+.adidasoutfit2{
+    margin-left:3vw;
+    margin-top: -5vh;
+    width: 18vw;
+}
+.adidasoutfit3{
+    margin-left: 3vw;
+    width: 14vw;
+    margin-top: -20vh;
+} 
+.star{
+    transform:rotate(45deg);
+    margin-left: 5vw;
+    transition: 0.1s;
+}
 
+.star2{
+    transform: rotate(170deg);
+    height: 10vh;
+    width: 10vh;
+    margin-top: -70vh;
+    margin-left: 28vw;
+    transition: 0.1s;
+}
+.star3{
+    transform: rotate(100deg);
+    height: 13vh;
+    width: 13vh;
+    margin-left: -20vw;
+    margin-top: -15vh;
+    transition: 0.1s;
+}
+
+.star:hover{
+    transform:rotate(90deg);
+}
+.star2:hover{
+    transform:rotate(120deg);
+}
+.star3:hover{
+    transform:rotate(120deg);
+}
+.platser{
+    position: relative;
+    margin-top: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2vw;
+    background-color: rgb(180, 211, 180);
+    padding: 2.5vw;
+}
+
+.shopping-box{
+    display: flex;
+    position: relative;
+    margin-top: 5vh;
+    justify-content: center;
+    padding-top: 5vh;
+    background-color: rgb(98, 143, 98);
+    height: 100vh;
+    width: 45vw;
+}
+.shopping-karta{
+    position: relative;
+    width: 40vw;
+    height: 30vw;
+}
 /**********************MOBIL********************/
 @media screen and (max-width: 600px){
     #startcontainer{
