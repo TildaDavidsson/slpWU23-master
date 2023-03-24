@@ -133,7 +133,7 @@ body{
     position: relative;
     bottom: 4vh;
     left: 46vw;
-    z-index: 0;
+    z-index: 1;
     transform: translateX(-50%);
     border-bottom-right-radius: 40px;
     border-bottom-left-radius: 40px;
@@ -167,23 +167,28 @@ body{
     flex-wrap: wrap;
     z-index: 10;
     position: absolute;
-    bottom: 10vh;
+    margin-top: -46vh;
     left: 9vw;
     transform: translateX(-50%);
     border-radius: 50px;
     width: 90vw;
-    height: 70vh;
+    height: 110vh;
     background-color: #fff;
     transition: bottom 0.9s ease;
-    pointer-events: none;
+    pointer-events: auto;
 }
 .info-btn {
     z-index: 1;
     transition: bottom 0.9s ease;
 }
 .second-info-btn{
-    z-index: 1;
+    position: absolute;
+    margin-top: 110vh;
+    margin-left: 50vw;
     transition: bottom 0.9s ease;
+    background-color: #fff;
+    width: 20vw;
+    z-index: 50;
 }
 
 .info-box.active .info-content {
@@ -205,6 +210,11 @@ body{
 }
 
 .downarrow {
+    height:3vh;
+    width: 3vh;
+    transition: transform 0.5s;
+}
+.downarrow2 {
     height:3vh;
     width: 3vh;
     transition: transform 0.5s;
@@ -254,6 +264,9 @@ body{
     margin-top: 120vh;
 }
 
+.second-info-box.active ~ .graffbox {
+    margin-top: 120vh;
+}
 .footer{
     grid-area:foot;
 }
@@ -398,9 +411,6 @@ body{
     transform: translateY(-7vh);
 }
 
-.image.clicked + .image.clicked{
-    transform: rotate(90deg);
-}
 
 .image.clicked {
     max-width: 50vh;
@@ -552,6 +562,7 @@ img{
     background-color: white;
     width: 85vw;
     height: 60vh;
+    align-self: center;
 }
 
 /****************************Clothing************************/
@@ -606,6 +617,7 @@ img{
     flex-wrap: wrap;
     padding: 2.5vw;
     background-color: rgb(229, 184, 142);
+    height: 100vh;
 }
 .adidas-text{
     font-size:4vh;
@@ -632,26 +644,26 @@ img{
     margin-top: -20vh;
 } 
 .star{
-    transform:rotate(45deg);
-    margin-left: 5vw;
-    transition: 0.1s;
+    position: relative;
+    margin-right: -5vw;
+    transition: 0.5s;
 }
 
 .star2{
-    transform: rotate(170deg);
+    position: absolute;
     height: 10vh;
     width: 10vh;
-    margin-top: -70vh;
-    margin-left: 28vw;
-    transition: 0.1s;
+    margin-top: 22vh;
+    margin-left: 60vw;
+    transition: 0.5s;
 }
 .star3{
-    transform: rotate(100deg);
+    position: absolute;
     height: 13vh;
     width: 13vh;
-    margin-left: -20vw;
-    margin-top: -15vh;
-    transition: 0.1s;
+    margin-left: 26vw;
+    margin-top: 35vh;
+    transition: 0.5s;
 }
 
 .star:hover{
@@ -688,6 +700,8 @@ img{
     width: 40vw;
     height: 30vw;
 }
+
+  
 /**********************MOBIL********************/
 @media screen and (max-width: 600px){
     #startcontainer{

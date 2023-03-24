@@ -11,15 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     });  
-
-
+    
     const infoBoxes = document.querySelectorAll('.info-box, .graffbox');
-
     infoBoxes.forEach(infoBox => {
       const infoBtn = infoBox.querySelector('.info-btn');
       const infoContent = infoBox.querySelector('.info-content');
-      const downArrow = infoBox.querySelector('.downarrow');
-    
+      const downArrow = infoBox.querySelector('.downarrow'); 
       infoBtn.addEventListener('click', () => {
         infoContent.classList.toggle('active');
         downArrow.classList.toggle('active');
@@ -28,7 +25,19 @@ document.addEventListener('DOMContentLoaded', function() {
           infoBox.classList.toggle('active2');
         }
       });
-    });    
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+     const secondInfoBox = document.querySelector('.second-info-box');
+     const secondInfoContent = document.querySelector('.second-info-content');
+     const secondInfoBtn = document.querySelector('#second-info-btn');
+     const downArrow = document.querySelector('.downarrow');
+
+     secondInfoBtn.addEventListener('click', () => {
+       secondInfoContent.classList.toggle('active');
+       secondInfoBox.classList.toggle('active');
+       downArrow.classList.toggle('active');
+      });
+    });
 });
 
 
