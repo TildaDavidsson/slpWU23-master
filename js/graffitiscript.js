@@ -1,8 +1,7 @@
 (function() {
     document.addEventListener('DOMContentLoaded', function() {
-      const infoBoxes = document.querySelectorAll('.info-box, .graffbox');
+      const infoBoxes = document.querySelectorAll('.info-box');
       const content = document.getElementById('info-content');
-      const button = document.getElementById('second-info-btn');
       infoBoxes.forEach(infoBox => {
          const infoBtn = infoBox.querySelector('.info-btn');
          const infoContent = infoBox.querySelector('.info-content');
@@ -11,13 +10,16 @@
              infoContent.classList.toggle('active');
              downArrow.classList.toggle('active');
              infoBox.classList.toggle('active');
-               if (infoBox.classList.contains('graffbox')) {
-                  infoBox.classList.toggle('active2');
-                }
             });
         });
-        button.addEventListener('click', function() {
-            content.classList.toggle('show');
-        });
+        const secondInfoBox = document.querySelector('.second-info-box');
+        const secondInfoContent = document.querySelector('.second-info-content');
+        const infoBtn2 = document.querySelector('.second-info-btn');
+        const secondDownArrow = secondInfoBox.querySelector('.seconddownarrow'); 
+         infoBtn2.addEventListener('click', () => {
+           secondInfoContent.classList.toggle('active');
+           secondDownArrow.classList.toggle('active');
+           secondInfoBox.classList.toggle('active');
+          });
     });
 })();

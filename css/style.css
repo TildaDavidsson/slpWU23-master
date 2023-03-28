@@ -78,14 +78,21 @@ body{
     position: relative;
 }
 
-.graffitikarta{
-    margin-top:5vh ;
-    width: 80vw;
+.kartarodasten{
     height: 60vh;
-    margin-left: 5vw;
-
+    width: 95vw;
+    padding:2.5vw;
+    margin-top:1vw;
+    z-index: 2;
 }
 
+.graffitikarta{
+    margin-top:5vh;
+    width: 80vw;
+    height: 50vh;
+    margin-left: 5vw;
+    z-index: 2;
+}
 
 .storimgtitel{
     font-size: 15vh;
@@ -100,7 +107,7 @@ body{
 .storimgundertitel{
     font-size: 4vh;
     color:rgba(255, 255, 255, 0.849);
-    margin-top: 55vh;
+    margin-top: 57vh;
     margin-left: 8vw;
     position: absolute;
 }
@@ -138,11 +145,13 @@ body{
     border-bottom-right-radius: 40px;
     border-bottom-left-radius: 40px;
     width: 20vw;
+    height: 5vw;
     background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: 2;
     transition: bottom 0.9s ease;
 }
   
@@ -165,9 +174,8 @@ body{
 .second-info-content{
     display: flex;
     flex-wrap: wrap;
-    z-index: 10;
     position: absolute;
-    bottom: 3vh;
+    bottom: 10vh;
     left: 9vw;
     transform: translateX(-50%);
     border-radius: 50px;
@@ -182,16 +190,18 @@ body{
     transition: bottom 0.9s ease;
 }
 .second-info-btn{
-    z-index: 3;
-    height: 5vh;
     transition: bottom 0.9s ease;
 }
-
-
 .info-box.active .info-content {
     opacity: 1;
     bottom: 9vh;
     pointer-events: auto;
+}
+.info-box.active {
+    bottom: -95vh;
+}
+.second-info-box.active {
+    bottom: -70vh;
 }
 .second-info-box.active .second-info-content {
     opacity: 1;
@@ -199,25 +209,22 @@ body{
     pointer-events: auto;
 }
 
-.info-box.active {
-    bottom: -100vh;
-}
-.second-info-box.active {
-    margin-top:  300vh;
-}
-
 .downarrow {
     height:3vh;
     width: 3vh;
     transition: transform 0.5s;
 }
-.downarrow2 {
+.seconddownarrow {
     height:3vh;
     width: 3vh;
     transition: transform 0.5s;
 }
 
 .downarrow.active {
+    transform: rotate(180deg);
+}
+
+.seconddownarrow.active {
     transform: rotate(180deg);
 }
 
@@ -228,11 +235,25 @@ body{
     position: absolute;
     padding-top: 70vh;
 }
+.info-titeltext2{
+    font-size: 10vh;
+    height:15vh;
+    padding:2.5vw;
+    position: absolute;
+    padding-top: 54vh;
+}
 .info-undertext{
     font-size:3vh;
     padding: 2.5vw;
     position: absolute;
     padding-top: 80vh;
+    padding-right: 30vw;
+}
+.info-undertext2{
+    font-size:3vh;
+    padding: 2.5vw;
+    position: absolute;
+    padding-top: 65vh;
     padding-right: 30vw;
 }
 .info-img{
@@ -247,7 +268,7 @@ body{
 .graffbox{
     display: flex;
     margin-top: 10vh;
-    z-index: 1;
+    z-index: 10;
     height: 80vh;
     width: 112.9%;
     margin-right: 0vw;
@@ -267,13 +288,7 @@ body{
 .footer{
     grid-area:foot;
 }
-.kartarodasten{
-    height: 60vh;
-    width: 95vw;
-    padding:2.5vw;
-    margin-top:2vw;
-}
-/*######################Hiphop########################*/
+/*#####################Hiphop########################*/
 #hiphopcontainer{
     display:grid;
     background-color: black;
@@ -627,6 +642,12 @@ img{
     z-index:0;
 }
 
+.skatekarta:hover{
+    z-index:4;
+    width: 35vw;
+    height:30vw;
+}
+
 .skatebox-title{
  color:black;
  font-size:7vh;
@@ -833,6 +854,7 @@ img{
     background-image: url(../img/hue.jpg);
     background-repeat:no-repeat;
     background-size: cover;
+    border-radius: 50px;
     height: 100vh;
     width: 45vw;
 }
@@ -850,6 +872,7 @@ img{
     width: 30vh;
     margin-left: 1vw;
     margin-top: -30vh;
+    z-index: 2;
 }
 
 .good-thing-about-place{
@@ -858,7 +881,8 @@ img{
     background-color:rgb(213, 142, 235);
     border-radius: 50%;
     height: 15vh;
-    width: 15vh
+    width: 15vh;
+    z-index: 2;
 }
 .another-good-thing-about-place{
     display: flex;
@@ -869,6 +893,38 @@ img{
     width: 12vh;
     margin-left: 6vw;
     margin-top: -6vh;
+    z-index: 2;
+}
+
+.circle1{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 30vh;
+    width: 30vh;
+    margin-top: 40vh;
+    z-index: 1;
+    position: absolute;
+}
+.circle2{
+    background-color:rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 15vh;
+    width: 15vh;
+    z-index: 1;
+    position: absolute;
+    margin-top: 71vh;
+    margin-left: 15vw;
+}
+
+.circle3{
+    background-color:rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 12vh;
+    width: 12vh;
+    z-index: 1;
+    position: absolute;
+    margin-top: 65vh;
+    margin-left: 29vw;
 }
 
   
