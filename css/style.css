@@ -167,29 +167,26 @@ body{
     flex-wrap: wrap;
     z-index: 10;
     position: absolute;
-    margin-top: -46vh;
+    bottom: 3vh;
     left: 9vw;
     transform: translateX(-50%);
     border-radius: 50px;
     width: 90vw;
-    height: 110vh;
+    height: 78vh;
     background-color: #fff;
     transition: bottom 0.9s ease;
-    pointer-events: auto;
+    pointer-events: none;
 }
 .info-btn {
     z-index: 1;
     transition: bottom 0.9s ease;
 }
 .second-info-btn{
-    position: absolute;
-    margin-top: 110vh;
-    margin-left: 50vw;
+    z-index: 3;
+    height: 5vh;
     transition: bottom 0.9s ease;
-    background-color: #fff;
-    width: 20vw;
-    z-index: 50;
 }
+
 
 .info-box.active .info-content {
     opacity: 1;
@@ -423,33 +420,67 @@ body{
     width: 100%;
     padding-bottom: 50vh;
 }
-.text-container {
-    z-index: 11;
-    position: absolute;
-    bottom: 0;
-    left: 50vw;
-    width: 30vw;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.5s ease;
-}
-  
-.text-container.active {
-    height: 20vh;
-}
-.text{
-    background-color: rgba(0, 0, 0, 0.466);
-    padding: 1vh;
-}  
-.image.clicked + .text-container {
-    height: 20vh;
-}
+ 
 .image {
     position: absolute;
 }
 
 .displayimg{
     position: absolute;
+}
+
+.playsong{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    margin-right: 30vw;
+    margin-top: 55vh;
+}
+
+#channel{
+    z-index: 0;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#smallworld{
+    z-index: 1;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+#azucar{
+    z-index: 2;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+#something{
+    z-index: 3;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+#snoop{
+    z-index: 4;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+#run{
+    z-index: 5;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 
