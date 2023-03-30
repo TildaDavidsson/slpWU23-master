@@ -10,11 +10,11 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     grid-template-columns: 100%;
-    grid-template-rows: 13vh 200vh 10vh;
+    grid-template-rows: 13vh auto 10vh;
     grid-template-areas: 
     'nav'
     'mn'
-    'ft'
+    'foot'
 }
 
 .contentnav{
@@ -34,6 +34,13 @@ body{
 .hometext{
     position: relative;
     top:10vh;
+}
+
+.footer{
+    grid-area:foot;
+    display: grid;
+    display: flex;
+    background:rgba(2, 34, 12, 0.589);
 }
 
 
@@ -285,9 +292,7 @@ body{
 .second-info-box.active ~ .graffbox {
     margin-top: 120vh;
 }
-.footer{
-    grid-area:foot;
-}
+
 /*#####################Hiphop########################*/
 #hiphopcontainer{
     display:grid;
@@ -356,6 +361,26 @@ body{
     row-gap: 2vh;
     justify-content: flex-start;
     max-width: 25vw;
+    z-index:2;
+}
+
+.playbutton{
+    display: flex;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    z-index: 1;
+    border-radius: 50%;
+    width: 5vh;
+    height: 5vh;
+    margin-right: 13vw;
+}
+.spelknapp{
+    z-index: 1;
+    height: 15vh;
+    width: 15vh;
+    align-self: center;
+    padding-top: 37vh;
 }
 
 .image-container {
@@ -448,7 +473,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;
-    margin-right: 30vw;
+    margin-right: 33vw;
     margin-top: 55vh;
 }
 
@@ -565,6 +590,19 @@ p{
 img{
     height: 50vh;
     width: 50vh;
+    z-index:2;
+}
+
+img:hover{
+    z-index:1;
+}
+
+img:hover .spelknapp{
+    z-index:5;
+}
+
+.playbutton:hover{
+    z-index:5;
 }
 
 .hemikon{
@@ -578,7 +616,7 @@ img{
     display:grid;
     background-color: black;
     grid-template-columns: 100%;
-    grid-template-rows: 13vh 400vh 10vh;
+    grid-template-rows: 13vh auto 10vh;
     grid-template-areas: 
     'nav'
     'main'
@@ -604,7 +642,7 @@ img{
     flex-direction: row;
     position: relative;
     justify-content: center;
-    column-gap: 5vw;
+    column-gap: 7vw;
 }
 
 .smalskatebox{
@@ -615,6 +653,8 @@ img{
     justify-content: center;
     height: 90vh;
     width: 40vw;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius:30px;
 }
 
 .skateinfo{
@@ -730,7 +770,7 @@ img{
     display:grid;
     background-color: black;
     grid-template-columns: 100%;
-    grid-template-rows: 13vh 400vh 10vh;
+    grid-template-rows: 13vh auto 10vh;
     grid-template-areas: 
     'nav'
     'clothingmain'
@@ -762,14 +802,30 @@ img{
 }
 
 .clothingbox-text{
-    z-index:2;
+    z-index:10;
     font-size: 20vh;
     position: absolute;
     margin-top: 40vh;
     margin-left: 60vw;
+    flex-wrap: wrap;
+    width: 50vh;
     opacity: 0.7;
 }
 
+.camelpics{
+    display: flex;
+    position: absolute;
+    margin-left: -32vw;
+    margin-top: 32vh;
+    flex-direction: row;
+    column-gap: 2vw;
+    z-index: 10;
+}
+
+.camel{
+    height: 65vh;
+    width: 20vw;
+}
 .adidas{
     position: relative;
     margin-top:72vh;
@@ -854,7 +910,8 @@ img{
     background-image: url(../img/hue.jpg);
     background-repeat:no-repeat;
     background-size: cover;
-    border-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
     height: 100vh;
     width: 45vw;
 }
