@@ -7,6 +7,10 @@
 @import url('https://fonts.cdnfonts.com/css/degrassi'); /* font-family: 'Degrassi', sans-serif;*/
 @import url('https://fonts.cdnfonts.com/css/nosegrind'); /*font-family: 'Nosegrind Demo', sans-serif;*/
 @import url('https://fonts.cdnfonts.com/css/good-dog'); /*font-family: 'GoodDog Plain', sans-serif;*/
+@import url('https://fonts.cdnfonts.com/css/gadaquali');/*font-family: 'GADAQUALI', sans-serif;*/
+@import url('https://fonts.cdnfonts.com/css/cofo-robert'); /*font-family: 'CoFo Robert', sans-serif;*/
+@import url('https://fonts.cdnfonts.com/css/laila');  /*font-family: 'Laila', sans-serif;*/
+
                                                 
                                                                                             
                                                 
@@ -34,6 +38,7 @@ a{
     margin-left:3vw;
     margin-top: 0.5vh;
     font-size: 3vh;
+    font-family: 'Laila', sans-serif;
 }
 
 .tricktext{
@@ -56,7 +61,9 @@ a{
 .skatebox-text{
     color:black;
     font-size:2vh;
-    margin-top: -23vh;
+    margin-top: 8vh;
+    font-family: 'Laila', sans-serif;
+    position: absolute;
 }
 .astart{
     text-decoration: none;
@@ -64,17 +71,49 @@ a{
     margin-top: 3vh;
     padding-left: 0px;
 }
-.skatelist{
-    z-index: 2;
-    text-decoration: none;
-    padding-left: 2vw;
-    transition: all 0.3s ease-in-out;
-}
-.skatelist:hover{
-    transform: translateY(-7vh);
-    opacity: 0.5;
+
+
+/*********Graff text**********/
+
+.storimgundertitel{
+    font-size: 4vh;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 57vh;
+    margin-left: 17vw;
+    position: absolute;
+    font-family: 'Laila', sans-serif;
 }
 
+.info-undertext{
+    font-size:3vh;
+    padding: 2.5vw;
+    position: absolute;
+    padding-top: 80vh;
+    padding-right: 30vw;
+    font-family: 'Laila', sans-serif;
+}
+.info-undertext2{
+    font-size:3vh;
+    padding: 2.5vw;
+    position: absolute;
+    padding-top: 65vh;
+    padding-right: 30vw;
+    font-family: 'Laila', sans-serif;
+}
+
+/****clothing text**********/
+.adidas-text{
+    font-size:4vh;
+    margin-right:27vw;
+    font-family: 'Laila', sans-serif;
+}
+h1{
+    font-size: 15vh;
+    color: white;
+    margin: 0px;
+    margin-left: 1vw;
+}
 
 .starth1{
     font-size: 20vh;
@@ -110,19 +149,6 @@ a{
 
 }
 
-.storimgundertitel{
-    font-size: 4vh;
-    color:rgba(255, 255, 255, 0.849);
-    margin-top: 57vh;
-    margin-left: 8vw;
-    position: absolute;
-}
-h1{
-    font-size: 15vh;
-    color: white;
-    margin: 0px;
-    margin-left: 1vw;
-}
 h2{  
     font-size: 4vh;
     color: rgba(255, 255, 255, 0.432);
@@ -134,6 +160,7 @@ h3{
     font-size: 4vh;
     color: white;
     margin-top: 1vh;
+    margin-left: -2vw;
     font-family: 'Graffiti font', sans-serif;
     
 }
@@ -168,28 +195,21 @@ h3{
     padding-bottom:2.5vw;
     margin-left: 3vw;
     position: absolute;
-    padding-top: 54vh;
+    padding-top: 56vh;
     font-family: 'Nosegrind Demo', sans-serif;
-}
-.info-undertext{
-    font-size:3vh;
-    padding: 2.5vw;
-    position: absolute;
-    padding-top: 80vh;
-    padding-right: 30vw;
-}
-.info-undertext2{
-    font-size:3vh;
-    padding: 2.5vw;
-    position: absolute;
-    padding-top: 65vh;
-    padding-right: 30vw;
 }
 
 p{
     font-size: 5vh;
     color: white;
     margin: 0px;
+}
+
+.clothingp{
+    font-family: 'Laila', sans-serif;
+    font-size: 3vh;
+    color: white;
+    margin-left: 2vw;
 }
 
 body{
@@ -217,6 +237,10 @@ body{
     background-color:  rgba(0, 0, 0, 0.842);
     flex-direction: row;
 }
+.hemikon{
+    height: 7vh;
+    width: 7vh;
+}
 
 .indexmain{
     grid-area: mn;
@@ -233,7 +257,7 @@ body{
     grid-area:foot;
     display: grid;
     display: flex;
-    background:rgba(2, 34, 12, 0.589);
+    background:rgb(0, 0, 0);
 }
 
 
@@ -699,11 +723,7 @@ img:hover .spelknapp{
     z-index:5;
 }
 
-.hemikon{
-    height: 7vh;
-    width: 7vh;
-    margin-top: 1.5vh;
-}
+
 
 /*                    Skate         */
 #skatecontainer{
@@ -714,7 +734,6 @@ img:hover .spelknapp{
     grid-template-areas: 
     'nav'
     'main'
-    'foot'
 }
 
 .skatemain{
@@ -761,8 +780,8 @@ img:hover .spelknapp{
 }
 .skatekarta{
     z-index:1;
-    width: 34vw;
-    height:29vw;
+    width: 35vw;
+    height:30vw;
     margin-top: -30vw;
 }
 .skateimg{
@@ -776,13 +795,42 @@ img:hover .spelknapp{
     z-index:0;
 }
 
-.skatekarta:hover{
+.skateimg:hover .skatekarta{
     z-index:4;
-    width: 35vw;
-    height:30vw;
 }
 
+.skatekarta:hover{
+    z-index:4;
+}
 
+.skatelist{
+    z-index: 2;
+    text-decoration: none;
+    padding-left: 2vw;
+    transition: all 0.3s ease-in-out;
+}
+.skatelist:hover{
+    transform: translateY(-7vh);
+    opacity: 0.5;
+}
+
+.smalskatebox {
+    position: relative;
+}
+
+.skater{
+    width: 10vh;
+    height: 10vh;
+    position: absolute;
+    margin-top: 75vh;
+    transition: transform 0.2 ease;
+    z-index: 5;
+}
+
+.skater:hover{
+    transform:rotate(-20deg)
+}
+  
 .skatebox2{
     display: flex;
     flex-wrap: wrap;
@@ -852,6 +900,16 @@ img:hover .spelknapp{
     height: 100vh;
     justify-content: space-evenly;
 }
+
+.clothingbox-text{
+    z-index:10;
+    position: absolute;
+    margin-top: 40vh;
+    margin-left: 75vw;
+    flex-wrap: wrap;
+    width: 80vh;
+    opacity: 0.7;
+}
 .firstimg{
     width: 100vw;
     height:100vh;
@@ -863,16 +921,6 @@ img:hover .spelknapp{
     height: 32vw;
 }
 
-.clothingbox-text{
-    z-index:10;
-    font-size: 20vh;
-    position: absolute;
-    margin-top: 40vh;
-    margin-left: 60vw;
-    flex-wrap: wrap;
-    width: 50vh;
-    opacity: 0.7;
-}
 
 .camelpics{
     display: flex;
@@ -896,10 +944,6 @@ img:hover .spelknapp{
     padding: 2.5vw;
     background-color: rgb(229, 184, 142);
     height: 100vh;
-}
-.adidas-text{
-    font-size:4vh;
-    margin-right:27vw;
 }
 
 .adidasskor{
@@ -993,7 +1037,7 @@ img:hover .spelknapp{
     background-color: rgb(43, 184, 66);
     height: 10vh;
     width: 70vh;
-    margin-top: -20vh;
+    margin-top: -22vh;
     z-index: 2;
     border-radius: 15px;
     font-size: 7vh;
@@ -1010,5 +1054,110 @@ img:hover .spelknapp{
     }
     h1{
         font-size: 10vh;
+    }
+    .contentnav {
+        flex-direction: row;
+        align-items: center;
+    }
+    h3 {
+        margin-left: 0;
+        margin-top: 1.5vh;
+        font-size: 3vh;
+        text-align: center;
+    }
+
+    /****hiphop for phone******/
+    #hiphopcontainer{
+        display:grid;
+        background-color: black;
+        grid-template-columns: max(100%);
+        overflow-x:hidden;
+        grid-template-rows: 10vh auto 10vh;
+        grid-template-areas: 
+        'nav'
+        'main'
+        'foot'
+    }
+    .hiphopmain{ 
+        grid-area: main;
+        flex-direction: column;
+        gap: 5vh;
+        padding-top: 40vh;
+    }
+    
+    .consert{
+        height:50vh;
+        margin-top: -10vh;
+    }
+    
+    .vit-linje2{
+        height: 2vh;
+        margin-top: 38vh;
+    }
+    .boxlayout{
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        margin-top: -7vh;
+        justify-content: center;
+    }
+    .boxlayout1{
+        margin-top: -10vh;
+    }
+
+    img{
+        height:10vh;
+        width:10vh;
+    }
+    
+    .title{
+        margin-left: 60px;
+        margin-top: 10vh;
+    }
+    
+    .musictext{
+        color: white;
+        font-size: 2vh;
+        text-align: center;
+    }
+    
+    .albumbox{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .album_layout{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        max-width: 25vw;
+        z-index:2;
+    }
+    
+    .playbutton{
+        display: flex;
+        position: absolute;
+        align-self: center;
+        justify-self: center;
+        z-index: 10;
+        border-radius: 50%;
+        width: 5vh;
+        height: 5vh;
+        margin-right: 13vw;
+    }
+    .spelknapp{
+        height: 5vh;
+        width: 5vh;
+        align-self: center;
+        margin-top: -35vh;
+        position: relative;
+    }
+    
+    .image-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 50vh;
     }
 }
