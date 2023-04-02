@@ -76,8 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
       channel.style.zIndex = 0;
     }
   });
-
-
 });
 
 

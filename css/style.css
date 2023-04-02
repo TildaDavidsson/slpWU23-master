@@ -24,6 +24,17 @@ a{
     margin-top: 3vh;
 }
 
+/******Hiphop text*******/
+.musictext{
+    color: white;
+    font-size: 4vh;
+    text-align: center;
+    font-family: 'Laila', sans-serif;
+}
+
+
+/******Skatetext*******/
+
 
 .tutorial{
     color:white;
@@ -83,6 +94,8 @@ a{
     margin-left: 17vw;
     position: absolute;
     font-family: 'Laila', sans-serif;
+    background-color: rgba(0, 0, 0, 0.349);
+    border-radius: 10px;
 }
 
 .info-undertext{
@@ -106,18 +119,22 @@ a{
 .adidas-text{
     font-size:4vh;
     margin-right:27vw;
+    color: rgb(0, 0, 0);
     font-family: 'Laila', sans-serif;
 }
+
+/****h(1,2,3),p********/
 h1{
     font-size: 15vh;
     color: white;
     margin: 0px;
     margin-left: 1vw;
+    
 }
 
 .starth1{
     font-size: 20vh;
-    color:rgba(255, 255, 255, 0.671);
+    color:rgb(255, 255, 255);
     margin:0px;
     text-align: center;
     font-family: 'Tourist Trap', sans-serif;
@@ -151,9 +168,10 @@ h1{
 
 h2{  
     font-size: 4vh;
-    color: rgba(255, 255, 255, 0.432);
+    color: rgb(255, 255, 255);
     margin: 0px;
     text-align: center;
+    font-family: 'Laila', sans-serif;
 }
 
 h3{
@@ -173,13 +191,13 @@ h3{
     color: white;
     padding-bottom: 4vh;
     margin-top: 1vh;
-    font-family: 'Nosegrind Demo', sans-serif;
+    font-family: 'Nosegrind Demo', serif;
 }
 .clothingh3{
     font-size: 9vh;
-    color: white;
+    color: rgb(7, 3, 3);
     margin-top: 1vh;
-    font-family: 'Sk8 or dye', sans-serif;
+    font-family: 'Sk8 or dye', serif;
 }
 .graffitih3{
     font-size: 7vh;
@@ -187,7 +205,7 @@ h3{
     padding:2.5vw;
     position: absolute;
     padding-top: 70vh;
-    font-family: 'Nosegrind Demo', sans-serif;
+    font-family: 'Nosegrind Demo', serif;
 }
 .secondgraffitih3{
     font-size: 7vh;
@@ -196,7 +214,7 @@ h3{
     margin-left: 3vw;
     position: absolute;
     padding-top: 56vh;
-    font-family: 'Nosegrind Demo', sans-serif;
+    font-family: 'Nosegrind Demo', serif;
 }
 
 p{
@@ -208,7 +226,7 @@ p{
 .clothingp{
     font-family: 'Laila', sans-serif;
     font-size: 3vh;
-    color: white;
+    color: rgb(12, 7, 7);
     margin-left: 2vw;
 }
 
@@ -227,7 +245,6 @@ body{
     grid-template-areas: 
     'nav'
     'mn'
-    'foot'
 }
 
 .contentnav{
@@ -521,11 +538,6 @@ body{
     margin-top: 10vh;
 }
 
-.musictext{
-    color: white;
-    font-size: 4vh;
-    text-align: center;
-}
 
 .albumbox{
     display: flex;
@@ -652,9 +664,10 @@ body{
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;
-    margin-right: 33vw;
+    margin-right: 30vw;
     margin-top: 55vh;
 }
+
 
 #channel{
     z-index: 0;
@@ -908,7 +921,6 @@ img:hover .spelknapp{
     margin-left: 75vw;
     flex-wrap: wrap;
     width: 80vh;
-    opacity: 0.7;
 }
 .firstimg{
     width: 100vw;
@@ -1021,8 +1033,8 @@ img:hover .spelknapp{
     background-size: cover;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
-    height: 100vh;
-    width: 45vw;
+    height: 70vh;
+    width: 46vw;
     justify-content: center;
 }
 .shopping-karta{
@@ -1037,13 +1049,14 @@ img:hover .spelknapp{
     background-color: rgb(43, 184, 66);
     height: 10vh;
     width: 70vh;
-    margin-top: -22vh;
+    margin-top: -10vh;
     z-index: 2;
     border-radius: 15px;
     font-size: 7vh;
     color: white;
     font-family: 'Degrassi', sans-serif;
 }
+
 
   
 /**********************MOBIL********************/
