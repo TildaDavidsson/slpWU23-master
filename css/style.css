@@ -1064,18 +1064,38 @@ img:hover .spelknapp{
     #startcontainer{
         background-image: url(https://media.giphy.com/media/BhW85yDQ1TA3u/giphy.gif);
         background-position: -300px,0;
-    }
-    h1{
-        font-size: 10vh;
+        grid-template-rows: 10vh 100vh;
     }
     .contentnav {
         flex-direction: row;
         align-items: center;
     }
+    .hemikon{
+        height: 4vh;
+        width: 4vh;
+        margin-left: 3vw;
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+        padding-left: 3vw;
+        margin-top: 3vh;
+    }
+    h1{
+        font-size: 10vh;
+    }
+    .starth1{
+        font-size: 8vh;
+    }
+    h2{
+        font-size: 2vh;
+    }
+
     h3 {
-        margin-left: 0;
+        margin-left: 2vw;
         margin-top: 1.5vh;
-        font-size: 3vh;
+        font-size: 1vh;
         text-align: center;
     }
 
@@ -1172,5 +1192,139 @@ img:hover .spelknapp{
         position: relative;
         width: 100%;
         padding-bottom: 50vh;
+    }
+
+
+    /*************kläder mobil*************/
+    #clothingcontainer{
+        display:grid;
+        background-color: black;
+        grid-template-columns: 100%;
+        grid-template-rows: 10vh auto 10vh;
+        grid-template-areas: 
+        'nav'
+        'clothingmain'
+        'foot'
+    }
+
+    .clothingh3{
+        font-size: 4vh;
+        text-align: center;
+    }
+    .clothingp{
+        font-size: 2vh;
+        margin-left: 0vw;
+        text-align: center;
+    }
+    
+    .clothingbox{
+        row-gap: 0.5vh;
+        height: 80vh;
+    }
+    
+    .clothingbox-text{
+        z-index:10;
+        position: absolute;
+        margin-top: 30vh;
+        margin-left: 0vw;
+        width: 60vh;
+    }
+    .firstimg{
+        height:72vh;
+    }
+    .camelpics{
+        margin-left:0;
+        margin-top: 40vh;
+    }
+    .camel{
+        height: 30vh;
+        width: 30vw;
+    }
+    .adidas{
+        margin-top:8vh;
+        height: 60vh;
+    }
+    .adidasskor{
+        margin-left: 50vw;
+        margin-top: 3vh;
+        height:20vh;
+        width: 20vh;
+        margin-top: 25vh;
+        position: absolute;
+    }
+    .adidasoutfit1{
+        margin-left: 1vw;
+        margin-top: 25vh;
+        height:20vh;
+        width: 20vh;
+        position: absolute;
+    }
+    .adidasoutfit2{
+       opacity: 0;
+       z-index: 0;
+    }
+    .adidasoutfit3{
+        opacity: 0;
+        z-index: 0;
+    } 
+
+    .adidas-text{
+        font-size:2vh;
+        margin-right:0vw;
+        margin-top: 10vh;
+        position: absolute;
+    }
+    .star{
+        position: absolute;
+        margin-top: 45vh;
+        margin-left: 10vw;
+    }
+    
+    .star2{
+        position: absolute;
+        height: 10vh;
+        width: 10vh;
+        margin-top: 45vh;
+        margin-left: 35vw;
+    }
+    .star3{
+        position: absolute;
+        height:10vh;
+        width: 10vh;
+        margin-left: 60vw;
+        margin-top: 45vh;
+    }
+    
+    .star:hover{
+        transform: none;
+    }
+    .star2:hover{
+        transform: none;
+    }
+    .star3:hover{
+        transform: none;
+    }
+    .platser{
+        margin-top: 0.5vh;
+        padding:3vw
+    }
+    
+    .shopping-box{
+        margin-top: 5vh;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        height: 30vh;
+        justify-content: center;
+    }
+    .shopping-karta{
+        height: 30vw;
+        width: 45vw;
+    }
+    
+    .name-of-place{
+        height: 6.5vh;
+        margin-top: -7vh;
+        font-size: 3vh;
+        text-align: center;
     }
 }
