@@ -282,7 +282,7 @@ body{
     display: grid;
     background-color: rgb(24, 24, 24);
     grid-template-columns: 100%;
-    grid-template-rows: 13vh minmax(auto,350vh) 10vh;
+    grid-template-rows: 13vh minmax(auto, 350vh) 10vh;
     grid-template-areas: 
     'nav'
     'main'
