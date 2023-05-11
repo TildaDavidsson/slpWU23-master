@@ -254,7 +254,9 @@ body{
     background-color:  rgba(0, 0, 0, 0.842);
     flex-direction: row;
 }
+
 .hemikon{
+    padding-top: 0.5vh;
     height: 7vh;
     width: 7vh;
 }
@@ -1135,9 +1137,13 @@ img:hover .spelknapp{
         margin-top: -7vh;
         justify-content: center;
     }
+ 
     .boxlayout1{
         margin-top: -10vh;
+        justify-content: flex-start;
+        flex-direction: row;
     }
+    
 
     img{
         height:10vh;
@@ -1156,18 +1162,97 @@ img:hover .spelknapp{
     }
     
     .albumbox{
+        max-height: 200px;
+        border: 1px solid #ddd; 
         display: flex;
         flex-direction: row;
-        align-items: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
     }
     
+    .albumbox .image{
+        width: 200px;
+        height: 200px;
+        line-height: 110px;
+        text-align: center;
+    }
     .album_layout{
         display: flex;
         flex-direction: column;
+        overflow-x: scroll;
         row-gap: 2vh;
         max-width: 25vw;
         z-index:2;
     }
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 0vh;
+        flex-direction: row;
+    }
+
+    .horizontal-scroll-menu::-webkit-scrollbar {
+        width: 10px;  /* Remove scrollbar space */
+        background: rgb(41, 38, 38);  /* Optional: just make scrollbar invisible */
+    }
+
+
+    .image {
+        position: relative;
+        z-index: 1;
+        max-width: 30vh;
+        max-height: 30vh;
+        top: 0vh;
+        left: 0vw;
+    }
+      
+    .image:nth-child(2){
+        position: relative;
+        z-index: 2;
+        max-width: 33vh;
+        max-height: 33vh;
+        top: 0vh;
+        left: 0vw;
+    }
+      
+    .image:nth-child(3) {
+        position: relative;
+        z-index: 3;
+        max-width: 36vh;
+        max-height: 36vh;
+        top: 0vh;
+        left: 0vw;
+    }
+      
+    .image:nth-child(4) {
+        position: relative;
+        z-index: 4;
+        max-width: 39vh;
+        max-height: 39vh;
+        top: 0vh;
+        left: 0vw;
+    }
+      
+    .image:nth-child(5) {
+        position: relative;
+        z-index: 5;
+        max-width: 41vh;
+        max-height: 41vh;
+        top: 0vh;
+        left: 0vw;
+    }
+      
+    .image:nth-child(6) {
+        position: relative;
+        z-index: 6;
+        max-width: 44vh;
+        max-height: 44vh;
+        left: 0vw;
+        top:0vh;
+    }
+
+    
     
     .playbutton{
         display: flex;
