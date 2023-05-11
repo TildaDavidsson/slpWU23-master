@@ -1285,10 +1285,11 @@ img:hover .spelknapp{
 
 
     /*************kläder mobil*************/
+ /*************kläder mobil*************/
     #clothingcontainer{
         display:grid;
         background-color: black;
-        grid-template-columns: max(100vw);
+        grid-template-columns: 100%;
         grid-template-rows: 10vh auto 10vh;
         grid-template-areas: 
         'nav'
@@ -1305,12 +1306,12 @@ img:hover .spelknapp{
         margin-left: 0vw;
         text-align: center;
     }
-    
+
     .clothingbox{
         row-gap: 0.5vh;
         height: 80vh;
     }
-    
+
     .clothingbox-text{
         z-index:10;
         position: absolute;
@@ -1368,7 +1369,7 @@ img:hover .spelknapp{
         margin-top: 45vh;
         margin-left: 10vw;
     }
-    
+
     .star2{
         position: absolute;
         height: 10vh;
@@ -1383,7 +1384,7 @@ img:hover .spelknapp{
         margin-left: 60vw;
         margin-top: 45vh;
     }
-    
+
     .star:hover{
         transform: none;
     }
@@ -1397,7 +1398,7 @@ img:hover .spelknapp{
         margin-top: 0.5vh;
         padding:3vw
     }
-    
+
     .shopping-box{
         margin-top: 5vh;
         border-bottom-right-radius: 0px;
@@ -1409,7 +1410,7 @@ img:hover .spelknapp{
         height: 30vw;
         width: 45vw;
     }
-    
+
     .name-of-place{
         height: 6.5vh;
         margin-top: -7vh;
@@ -1511,11 +1512,15 @@ img:hover .spelknapp{
         'foot'
     }
    .graffitih1{
-    font-size: 9vh;
+    overflow-x: hidden;
+    font-size: 8vh;
     margin-left: -2vw;
    }
+   .vit-linje{
+    overflow-x: hidden;
+   }
    .graffitih1background{
-    font-size: 9vh;
+    font-size: 8vh;
     margin-left: -2vw;
    }
    .storimgundertitel{
@@ -1523,19 +1528,74 @@ img:hover .spelknapp{
     margin-left: 3vw;
    }
    .storimg{
+    overflow-x: hidden;
     width:200vw;
     margin-left: -10vh;
     margin-top: -30vh;
    }
    .graffitimain{
     overflow-x: hidden;
+    max-width: 100%;
     margin-top: -13vh;
    }
    .graffbox{
+    overflow-x: hidden;
     width:200vw;
     margin-left: -10vh;
     margin-top: 5vh;
    }
-
+   .info-box{
+    color:rgb(0, 0, 0)
+    height:2vh;
+    row-gap:0;
+   }
+   .info-content{
+    overflow-x: hidden;
+    width:95vw;
+    margin-left: 1vw;
+    margin-bottom: -7.8vh;
+   }
+   .second-info-box{
+    margin-top: 7vh;
+    margin-left: -5vh;
+    z-index:10;
+   }
+   .info-btn{
+    z-index:12;
+    background-color: white;
+    margin-top: -15vh;
+   }
+    .graffitih3{
+        font-size: 25px;
+    }
+    .secondgraffitih3{
+        font-size:25px;
+    }
+    .info-undertext{
+        font-size: 15px;
+        width:90vw;
+        text-align:center;
+        margin-top: -3vh;
+    }
+    .info-undertext2{
+        font-size: 15px;
+        width:80vw;
+        text-align:center;
+        margin-top: -3vh;
+    }
+    .info-img{
+       opacity:0;
+    }
+    .downarrow {
+        z-index: 20;
+        height: 3vh;
+        width: 3vh;
+        transition: transform 0.5s;
+    }
+    .seconddownarrow {
+        height:3vh;
+        width: 3vh;
+        transition: transform 0.5s;
+    }
     
 }
