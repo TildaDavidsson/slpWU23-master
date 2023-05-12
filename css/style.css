@@ -1203,7 +1203,7 @@ img:hover .spelknapp{
     #clothingcontainer{
         display:grid;
         background-color: black;
-        grid-template-columns: 100%;
+        grid-template-columns: max(100vw);
         grid-template-rows: 10vh auto 10vh;
         grid-template-areas: 
         'nav'
@@ -1331,4 +1331,126 @@ img:hover .spelknapp{
         font-size: 3vh;
         text-align: center;
     }
+
+    /********Skate*****************/
+    #skatecontainer{
+        overflow-x: hidden;
+        grid-template-columns: 90vw;
+        grid-template-rows: 13vh auto 10vh;
+        grid-template-areas: 
+        'nav'
+        'main'
+    }
+    .skatebox{
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: flex-start;
+        padding-left: 5vw;
+        margin-top: -210px;
+        height: 65vh;
+
+    }
+    .skatebox-title{
+        font-size:7vh;
+    }
+    .skatebox-text{
+        padding-left: 3vw;
+    }
+    .smalskatebox{
+        padding: 2vw;
+        justify-content: center;
+        height: 60vh;
+        width: 90vw;
+    }
+    .skateimg{
+        z-index:-5;
+    }
+
+    .skatekarta{
+        width:80vw;
+        height:60vw;
+        padding-top: 20vh;
+    }
+
+    .skater{
+        width: 5vh;
+        height: 5vh;
+        margin-top: 53vh;
+    }
+    .skatebox2{
+        flex-wrap: nowrap;
+        width: 100vw;
+        height: 92vh;
+        margin-top: 5px;
+    }
+    .skatecontent{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        justify-content: flex-start;
+
+    }
+    .tutorial{
+        font-size: 8vh;
+        align-self: center;
+    }
+   .ollie{
+    width: 60vw;
+    margin-top: -5vh;
+   }
+   .kickflip{
+    width: 60vw;
+    margin-top: -5vh;
+   }
+   .shuvit{
+    width: 60vw;
+    margin-top: -5vh;
+   }
+   .powerslide{
+    width: 60vw;
+    margin-top: -5vh;
+   }
+   .tricktext{
+    font-size: 4vw;
+    margin-top: 0vh;
+    } 
+
+    /**********Graffiti********/
+    #graffiticontainer{
+        display: grid;
+        background-color: rgb(24, 24, 24);
+        grid-template-columns: 100vw;
+        grid-template-rows: 13vh minmax(auto, 350vh) 10vh;
+        grid-template-areas: 
+        'nav'
+        'main'
+        'foot'
+    }
+   .graffitih1{
+    font-size: 9vh;
+    margin-left: -2vw;
+   }
+   .graffitih1background{
+    font-size: 9vh;
+    margin-left: -2vw;
+   }
+   .storimgundertitel{
+    font-size: 3vh;
+    margin-left: 3vw;
+   }
+   .storimg{
+    width:200vw;
+    margin-left: -10vh;
+    margin-top: -30vh;
+   }
+   .graffitimain{
+    overflow-x: hidden;
+    margin-top: -13vh;
+   }
+   .graffbox{
+    width:200vw;
+    margin-left: -10vh;
+    margin-top: 5vh;
+   }
+
+    
 }
