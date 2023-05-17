@@ -1542,16 +1542,14 @@ img:hover .spelknapp{
     overflow-x: hidden;
     width:200vw;
     margin-left: -10vh;
-    margin-top: 5vh;
    }
    .info-box{
     color:rgb(0, 0, 0)
-    height:2vh;
-    row-gap:0;
    }
    .info-content{
     overflow-x: hidden;
     width:95vw;
+    height: 120vh;
     margin-left: 1vw;
     margin-bottom: -7.8vh;
    }
@@ -1597,5 +1595,28 @@ img:hover .spelknapp{
         width: 3vh;
         transition: transform 0.5s;
     }
-    
+    .info-box.active {
+        bottom: -85vh;
+    }
+    .second-info-box{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1vh;
+        position: relative;
+        bottom: 5vh;
+        left: 46vw;
+        z-index: 1;
+        transform: translateX(-50%);
+        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        width: 20vw;
+        height: 5vw;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 2;
+        transition: bottom 0.9s ease;
+    }   
 }
