@@ -122,6 +122,12 @@ a{
     color: rgb(0, 0, 0);
     font-family: 'Laila', sans-serif;
 }
+.shop-text{
+    font-size:4vh;
+    margin-right:27vw;
+    color: rgb(0, 0, 0);
+    font-family: 'Laila', sans-serif;
+}
 
 /****h(1,2,3),p********/
 h1{
@@ -1115,6 +1121,7 @@ img:hover .spelknapp{
         font-size: 1vh;
         text-align: center;
     }
+    
 
     /****hiphop for phone******/
     #hiphopcontainer{
@@ -1259,7 +1266,7 @@ img:hover .spelknapp{
     #clothingcontainer{
         display:grid;
         background-color: black;
-        grid-template-columns: 100%;
+        grid-template-columns: 100vw;
         grid-template-rows: 10vh auto 10vh;
         grid-template-areas: 
         'nav'
@@ -1301,7 +1308,7 @@ img:hover .spelknapp{
         width: 30vw;
     }
     .adidas{
-        margin-top:8vh;
+        margin-top:8.5vh;
         height: 60vh;
     }
     .adidasskor{
@@ -1334,24 +1341,32 @@ img:hover .spelknapp{
         margin-top: 10vh;
         position: absolute;
     }
+    .shop-text{
+        font-size:2vh;
+        margin-right:0vw;
+        margin-top: 5vh;
+        position: absolute;
+    }
     .star{
         position: absolute;
         margin-top: 45vh;
         margin-left: 10vw;
+        height: 5vh;
+        width: 5vh;
     }
 
     .star2{
         position: absolute;
         height: 10vh;
         width: 10vh;
-        margin-top: 45vh;
-        margin-left: 35vw;
+        margin-top: 50vh;
+        margin-left: 29vw;
     }
     .star3{
         position: absolute;
-        height:10vh;
-        width: 10vh;
-        margin-left: 60vw;
+        height:9vh;
+        width: 9vh;
+        margin-left: 65vw;
         margin-top: 45vh;
     }
 
@@ -1365,12 +1380,12 @@ img:hover .spelknapp{
         transform: none;
     }
     .platser{
-        margin-top: 0.5vh;
+        margin-top: 1vh;
         padding:3vw
     }
 
     .shopping-box{
-        margin-top: 5vh;
+        margin-top: 7vh;
         border-bottom-right-radius: 0px;
         border-bottom-left-radius: 0px;
         height: 30vh;
