@@ -286,7 +286,7 @@ body{
     display: grid;
     background-color: rgb(24, 24, 24);
     grid-template-columns: 100%;
-    grid-template-rows: 13vh minmax(auto, 350vh) 10vh;
+    grid-template-rows: 13vh auto 10vh;
     grid-template-areas: 
     'nav'
     'main'
@@ -300,6 +300,7 @@ body{
     flex-direction: column;
     padding: 8vh;
     row-gap: 3vh; 
+    transition: 0.9 ease;
 }
 
 .vit-linje{
@@ -475,16 +476,23 @@ body{
     margin-left:-8vw;
     background-image: url(../img/bergsjonn.jpg);
     background-size: cover;
-    transition: 0.5s ease-in-out;
+    transition: 0.7s ease-in-out;
 }
 
+.move_this{
+    transition: 0.9s ease;
+}
 .info-box.active ~ .graffbox {
     margin-top: 120vh;
 }
 
-.second-info-box.active ~ .graffbox {
-    margin-top: 120vh;
+.second-info-box.active ~ .move_this {
+    margin-top: 70vh;
 }
+
+
+
+
 
 /*#####################Hiphop########################*/
 #hiphopcontainer{
@@ -1071,6 +1079,9 @@ img:hover .spelknapp{
         background-image: url(https://media.giphy.com/media/BhW85yDQ1TA3u/giphy.gif);
         background-position: -300px,0;
         grid-template-rows: 10vh 100vh;
+        background-image: cover;
+        overflow-y: hidden;
+        
     }
     .contentnav {
         flex-direction: row;
@@ -1127,6 +1138,8 @@ img:hover .spelknapp{
     .consert{
         height:50vh;
         margin-top: -10vh;
+        width: 100vw;
+        overflow-x: hidden;
     }
     
     .vit-linje2{
@@ -1379,10 +1392,21 @@ img:hover .spelknapp{
     #skatecontainer{
         overflow-x: hidden;
         grid-template-columns: 90vw;
-        grid-template-rows: 13vh auto 10vh;
+        grid-template-rows: 10vh auto 10vh;
         grid-template-areas: 
         'nav'
         'main'
+    }
+    .contentnav{
+        z-index: 10;
+        width:100vw;
+        overflow-x: hidden;
+        grid-area:nav;
+        display: flex;
+        background-color:  rgb(0, 0, 0);
+        justify-content: space-between;
+        flex-direction: row;
+        padding-right: 3vw;
     }
     .skatebox{
         flex-wrap: nowrap;
@@ -1394,7 +1418,7 @@ img:hover .spelknapp{
 
     }
     .skatebox-title{
-        font-size:7vh;
+        font-size:6vh;
     }
     .skatebox-text{
         padding-left: 3vw;
@@ -1405,8 +1429,11 @@ img:hover .spelknapp{
         height: 60vh;
         width: 90vw;
     }
+    .skate-text{
+        font-size: 5vw;
+    }
     .skateimg{
-        z-index:-5;
+        z-index:-10;
     }
 
     .skatekarta{
@@ -1460,32 +1487,43 @@ img:hover .spelknapp{
     /**********Graffiti********/
     #graffiticontainer{
         display: grid;
+        overflow-x: hidden;
         background-color: rgb(24, 24, 24);
         grid-template-columns: 100vw;
-        grid-template-rows: 13vh minmax(auto, 350vh) 10vh;
+        grid-template-rows: 10vh auto 10vh;
         grid-template-areas: 
         'nav'
         'main'
         'foot'
     }
+    .contentnav{
+        z-index: 10;
+        grid-area:nav;
+        display: flex;
+        background-color:  rgb(0, 0, 0);
+        justify-content: space-between;
+        flex-direction: row;
+        padding-right: 3vw;
+    }
+    
    .graffitih1{
     overflow-x: hidden;
-    font-size: 8vh;
-    margin-left: -2vw;
+    font-size: 7.5vh;
+    margin-left: 2vw;
    }
    .vit-linje{
     overflow-x: hidden;
    }
    .graffitih1background{
-    font-size: 8vh;
-    margin-left: -2vw;
+    font-size: 7.5vh;
+    margin-left: 2vw;
    }
    .storimgundertitel{
-    font-size: 3vh;
-    margin-left: 3vw;
+    font-size: 2.5vh;
+    margin-left: 13vw;
    }
    .storimg{
-    overflow-x: hidden;
+    overflow-x: visible;
     width:200vw;
     margin-left: -10vh;
     margin-top: -30vh;
@@ -1493,34 +1531,65 @@ img:hover .spelknapp{
    .graffitimain{
     overflow-x: hidden;
     max-width: 100%;
-    margin-top: -13vh;
+    margin-top: 0vh;
    }
    .graffbox{
     overflow-x: hidden;
     width:200vw;
     margin-left: -10vh;
    }
-   .info-box{
-    color:rgb(0, 0, 0)
+   .second-info-box{
+    margin-left: 40vw;
+    row-gap: 0vh;
+    bottom: 4vh;
+    left: -5vw;
+    z-index: 1;
+    width: 34vw;
+    height: 12vw;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 0;
+    transition: bottom 0.9s ease;
    }
    .info-content{
     overflow-x: hidden;
-    width:95vw;
+    width:92vw;
     height: 120vh;
-    margin-left: 1vw;
-    margin-bottom: -7.8vh;
+    margin-left: 8vw;
+    margin-bottom: -8vh;
    }
-   .second-info-box{
-    margin-top: 7vh;
-    margin-left: -5vh;
-    z-index:10;
+   .info-box{
+    width:34vw;
    }
    .info-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index:12;
     background-color: white;
-    margin-top: -15vh;
+    margin-top:0vh;
+    width:34vw;
+    height:12vw;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
    }
+   .second-info-content{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 5vh;
+    left: 15vw;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    width: 95vw;
+    height: 78vh;
+    background-color: #fff;
+    transition: bottom 0.9s ease;
+    pointer-events: none;
+    }
     .graffitih3{
+        margin-left: 3vw;
         font-size: 25px;
     }
     .secondgraffitih3{
@@ -1530,18 +1599,21 @@ img:hover .spelknapp{
         font-size: 15px;
         width:90vw;
         text-align:center;
-        margin-top: -3vh;
+        justify-self: center;
+        margin-top: -5vh;
     }
     .info-undertext2{
         font-size: 15px;
         width:80vw;
         text-align:center;
+        margin-left: 3vw;
         margin-top: -3vh;
     }
     .info-img{
        opacity:0;
     }
     .downarrow {
+        margin-bottom:0vh;
         z-index: 20;
         height: 3vh;
         width: 3vh;
@@ -1555,25 +1627,13 @@ img:hover .spelknapp{
     .info-box.active {
         bottom: -85vh;
     }
-    .second-info-box{
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 1vh;
-        position: relative;
-        bottom: 5vh;
-        left: 46vw;
-        z-index: 1;
-        transform: translateX(-50%);
-        border-bottom-right-radius: 40px;
-        border-bottom-left-radius: 40px;
-        width: 20vw;
-        height: 5vw;
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        z-index: 2;
-        transition: bottom 0.9s ease;
-    }   
+    .second-info-box.active {
+        bottom: -70vh;
+    }
+    .second-info-box.active .second-info-content {
+        opacity: 1;
+        bottom: 4vh;
+        pointer-events: auto;
+    }
+    
 }
